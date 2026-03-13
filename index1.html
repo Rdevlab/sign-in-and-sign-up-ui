@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Box Market</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="./style1.css" />
+    <script src="./app.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+
+  <body>
+    <!-- Login page -->
+    <section class="w-full h-screen flex justify-center items-center bg-[var(--primary)]/10">
+      <div class="w-[55%] min-h-[70vh] rounded-2xl shadow flex overflow-hidden">
+        <!-- sign in -->
+        <article class="w-1/2 flex flex-col gap-4 p-8">
+          <!-- header buttons -->
+          <div
+            class="w-full relative flex rounded-md bg-[var(--color2)] px-4 py-2 justify-between font-semibold">
+            <!-- button backholder in green -->
+            <span
+              class="absolute top-0 left-0 h-full bg-[var(--color1)] w-1/2 z-0 rounded-md duration-300 transition-all"
+              id="buttonholder"></span>
+            <button class="z-10 w-full cursor-pointer" id="signinbtn">Sign In</button>
+            <button class="z-10 w-full cursor-pointer" id="signupbtn">Sign Up</button>
+          </div>
+          <!-- forms -->
+          <section
+            class="flex overflow-hidden w-[50vw] gap-10 p-2 pr-10 duration-300"
+            id="formsContainer">
+            <!-- sgin in option -->
+            <div class="flex flex-col h-full gap-4 w-1/2">
+              <form action="#" class="flex flex-col gap-4">
+                <!-- usrname input -->
+                <div class="flex flex-col gap-1">
+                  <label for="username">Mobile Number or E-mail</label>
+                  <span
+                    class="flex gap-2 items-center border border-[var(--color2)] px-4 py-2 rounded-xl">
+                    <i class="fas fa-user text-[var(--color5)]"></i>
+                    <input
+                      type="text"
+                      placeholder="Eg-hello@gmail.com"
+                      id="username"
+                      required
+                      class="outline-none" />
+                  </span>
+                </div>
+                <!-- password input -->
+                <div class="flex flex-col gap-1">
+                  <label for="password">Password</label>
+                  <span
+                    class="flex gap-2 justify-between items-center border border-[var(--color2)] px-4 py-2 rounded-xl">
+                    <i class="fas fa-lock text-[var(--color5)]"></i>
+                    <input
+                      type="password"
+                      placeholder="password"
+                      required
+                      id="password"
+                      class="outline-none w-full" />
+
+                    <i class="fas fa-eye cursor-pointer" id="showpassword"></i>
+                  </span>
+                </div>
+                <!-- forget password checkbox -->
+                <div class="flex justify-between">
+                  <span class="flex items-center gap-2">
+                    <input type="checkbox" id="checkbox" required />
+                    <label for="checkbox">Remember me</label>
+                  </span>
+                  <a href="#" class="text-[var(--color3)]">Forget the password?</a>
+                </div>
+                <input
+                  type="submit"
+                  value="Sign In"
+                  class="w-full rounded-lg bg-[var(--color1)] p-2 text-lg font-semibold text-white cursor-pointer" />
+              </form>
+              <!-- social media login -->
+              <div class="w-full items-center flex justify-center text-sm text-[var(--color5)]">
+                <span
+                  class="relative after:content-'' after:w-22 after:h-[1px] after:bg-[var(--color2)] after:flex after:absolute after:top-1/2 after:-left-full before:content-'' before:w-22 before:h-[1px] before:bg-[var(--color2)] before:flex before:absolute before:top-1/2 before:-right-full"
+                  >Or Login width</span
+                >
+              </div>
+              <div class="flex w-full justify-around items-center p-2 gap-6 text-2xl">
+                <a
+                  href="#"
+                  class="p-2 border text-blue-600 flex justce rounded-md w-full items-center justify-center cursor-pointer hover:border-[var(--color2)]"
+                  ><i class="fab fa-telegram"></i
+                ></a>
+                <a
+                  href="#"
+                  class="border p-2 flex justce items-center rounded-md w-full justify-center cursor-pointer hover:border-[var(--color2)]"
+                  ><i class="fab fa-apple"></i
+                ></a>
+                <a
+                  href="#"
+                  class="border text-red-500 p-2 flex justce items-center rounded-md w-full justify-center cursor-pointer hover:border-[var(--color2)]"
+                  ><i class="fab fa-google"></i
+                ></a>
+              </div>
+            </div>
+            <!-- sign up option -->
+            <div class="flex flex-col h-full justify-between w-1/2">
+              <form action="#" class="flex flex-col gap-4">
+                <!-- usrname input -->
+                <div class="flex flex-col gap-1">
+                  <label for="signUpuserName">User Name</label>
+                  <span
+                    class="flex gap-2 items-center border border-[var(--color2)] px-4 py-2 rounded-xl">
+                    <i class="fas fa-user text-[var(--color5)]"></i>
+                    <input
+                      type="text"
+                      placeholder="john"
+                      id="signUpuserName"
+                      required
+                      class="outline-none" />
+                  </span>
+                </div>
+
+                <!-- email inpt -->
+                <div class="flex flex-col gap-1">
+                  <label for="signUpemail">Mobile Number or E-mail</label>
+                  <span
+                    class="flex gap-2 items-center border border-[var(--color2)] px-4 py-2 rounded-xl">
+                    <i class="fas fa-user text-[var(--color5)]"></i>
+                    <input
+                      type="text"
+                      placeholder="Eg-hello@gmail.com"
+                      id="signUpemail"
+                      required
+                      class="outline-none" />
+                  </span>
+                </div>
+                <!-- password input -->
+                <div class="flex flex-col gap-1">
+                  <label for="signUppassword">Password</label>
+                  <span
+                    class="flex gap-2 justify-between items-center border border-[var(--color2)] px-4 py-2 rounded-xl">
+                    <i class="fas fa-lock text-[var(--color5)]"></i>
+                    <input
+                      type="password"
+                      placeholder="password"
+                      required
+                      id="signUppassword"
+                      class="outline-none w-full" />
+                  </span>
+                </div>
+                <!-- repeat password -->
+                <div class="flex flex-col gap-1">
+                  <label for="signUppassword2">Repeat Password</label>
+                  <span
+                    class="flex gap-2 justify-between items-center border border-[var(--color2)] px-4 py-2 rounded-xl">
+                    <i class="fas fa-lock text-[var(--color5)]"></i>
+                    <input
+                      type="password"
+                      placeholder="password"
+                      required
+                      id="signUppassword2"
+                      class="outline-none w-full" />
+
+                    <i class="fas fa-eye cursor-pointer" id="showSignUpPassword"></i>
+                  </span>
+                </div>
+                <!-- forget password checkbox -->
+                <div class="flex justify-between">
+                  <span class="flex items-center gap-2">
+                    <input type="checkbox" id="terms" required />
+                    <label for="terms">Terms and Conditions</label>
+                  </span>
+                </div>
+                <input
+                  type="submit"
+                  value="Sign In"
+                  class="w-full rounded-lg bg-[var(--color1)] p-2 text-lg font-semibold text-white cursor-pointer" />
+              </form>
+              <!-- social media login -->
+            </div>
+          </section>
+        </article>
+        <div
+          class="w-full bg-[var(--color)] z-10 flex flex-col justify-center items-center text-center p-12 gap-2 select-none">
+          <span class="w-30 h-30 rounded-full overflow-hidden"
+            ><img src="./img/Logo.jpeg" alt="" class="w-full h-full hover:scale-105 duration-300"
+          /></span>
+          <h1 class="text-xl font-bold">Welcome to Box-market</h1>
+          <p class="text-sm">To access to your account, please Sign-In or create a new account.</p>
+          <div class="flex gap-4 items-center p-2 justify-center w-full">
+            <span class="flex flex-col text-center w-full p-2 rounded-md select-none bg-white/50">
+              <span class="text-xl font-bold">10K+</span>
+              <p>Products</p>
+            </span>
+            <span class="flex flex-col text-center w-full p-2 rounded-md select-none bg-white/50">
+              <span class="text-xl font-bold">50K+</span>
+              <p class="w-full">Satisfied Cusotmers</p>
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
